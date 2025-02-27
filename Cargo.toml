@@ -2,6 +2,13 @@
 name = "relm4-issue-641"
 version = "0.1.0"
 edition = "2024"
+license = "CC0-1"
+
+[features]
+default = ["current"]
+current = ["relm4"]
+git = ["relm4-git"]
 
 [dependencies]
-relm4 = "=0.9.1"
+relm4 = { optional = true, version = "0.9.1" }
+relm4-git = { optional = true, git = "https://github.com/Relm4/Relm4", package="relm4" }

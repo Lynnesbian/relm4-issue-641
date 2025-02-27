@@ -1,3 +1,6 @@
+#[cfg(feature = "git")]
+use relm4_git as relm4;
+
 use relm4::prelude::*;
 use relm4::gtk::prelude::*;
 
@@ -8,6 +11,7 @@ fn main() {
 
 struct Window(bool);
 
+#[allow(irrefutable_let_patterns)]
 #[relm4::component(pub)]
 impl SimpleComponent for Window {
 	type Input = ();

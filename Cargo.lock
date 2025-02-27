@@ -661,8 +661,24 @@ dependencies = [
  "futures",
  "gtk4",
  "once_cell",
- "relm4-css",
- "relm4-macros",
+ "relm4-css 0.9.0",
+ "relm4-macros 0.9.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "tokio",
+ "tracing",
+]
+
+[[package]]
+name = "relm4"
+version = "0.9.1"
+source = "git+https://github.com/Relm4/Relm4#0f7e63f5aa93c031cc778ff8feb2871a3b5e6a85"
+dependencies = [
+ "flume",
+ "fragile",
+ "futures",
+ "gtk4",
+ "once_cell",
+ "relm4-css 0.9.1",
+ "relm4-macros 0.9.1 (git+https://github.com/Relm4/Relm4)",
  "tokio",
  "tracing",
 ]
@@ -674,10 +690,16 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1d3b924557df1cddc687b60b313c4b76620fdbf0e463afa4b29f67193ccf37f9"
 
 [[package]]
+name = "relm4-css"
+version = "0.9.1"
+source = "git+https://github.com/Relm4/Relm4#0f7e63f5aa93c031cc778ff8feb2871a3b5e6a85"
+
+[[package]]
 name = "relm4-issue-641"
 version = "0.1.0"
 dependencies = [
- "relm4",
+ "relm4 0.9.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "relm4 0.9.1 (git+https://github.com/Relm4/Relm4)",
 ]
 
 [[package]]
@@ -685,6 +707,16 @@ name = "relm4-macros"
 version = "0.9.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5a895a7455441a857d100ca679bd24a92f91d28b5e3df63296792ac1af2eddde"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn",
+]
+
+[[package]]
+name = "relm4-macros"
+version = "0.9.1"
+source = "git+https://github.com/Relm4/Relm4#0f7e63f5aa93c031cc778ff8feb2871a3b5e6a85"
 dependencies = [
  "proc-macro2",
  "quote",
